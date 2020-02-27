@@ -114,6 +114,6 @@ Result class is returned when payment process successful.
 
 **[Ashim Upadhaya](https://www.github.com/ayyshim)**
 
-Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/esewa_pnp/tree/dev/example)
+Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/esewa_pnp/tree/master/example)
 
 > This plugin can only be used on android platform because I don't have mac.
