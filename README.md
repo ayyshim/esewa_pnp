@@ -1,10 +1,14 @@
 # esewa_pnp
 
-[![pub package](https://img.shields.io/badge/pub-v.0.1.0-green)](https://pub.dartlang.org/packages/esewa_pnp) 
+[![pub package](https://img.shields.io/badge/pub-v.0.1.0+1-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
 **esewa_pnp** is a flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
 ## How to install
+
+- [Download eSewaSdk.arr](https://drive.google.com/drive/folders/1JbIylqA4YR61mQNOHRyQVXctSao5cVQz?usp=sharing) file and save it.
+
+- Go to this YouTube link and watch full integration walk through video [https://youtu.be/95hBW2SDM-Q](https://youtu.be/95hBW2SDM-Q).
 
 - Add following attribute inside your AndroidMainfest.xml
 
@@ -15,10 +19,8 @@
       ...>
   ...
   </application>
-  
-  ```
 
-  
+  ```
 
 ## Usage
 
@@ -72,8 +74,6 @@ final _res = await _eSewaPnp.initPayment(payment: _payment);
 
 `Result` type indicates the successful payment.
 
-
-
 5. Determine application behavior according to the response
 
 ```
@@ -87,8 +87,6 @@ _res.fold(
     }
 );
 ```
-
-
 
 ### ❌ Failure
 
@@ -107,8 +105,6 @@ Result class is returned when payment process successful.
 - `.date` [String] : returns the date of transaction
 - `.status` [String] : returns the transaction status
 - `.referenceId` [String] : returns the transaction reference id
-
-
 
 ## 👨‍🦱 Author
 
