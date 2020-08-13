@@ -97,15 +97,15 @@ class _MyAppState extends State<MyApp> {
       productID: "abc123001",
       callBackURL: "https://www.uashim.com.np/",
     );
-    final res = await _esewaPnp.initPayment(payment: eSewaPayment);
+    try {
+      final res = await _esewaPnp.initPayment(payment: eSewaPayment);
 
-    res.fold((l) {
-      _scaffoldKey.currentState
-          .showSnackBar(_buildSnackBar(Colors.red, l.message));
-    }, (r) {
       _scaffoldKey.currentState.showSnackBar(
-          _buildSnackBar(Color.fromRGBO(65, 161, 36, 1), r.message));
-    });
+          _buildSnackBar(Color.fromRGBO(65, 161, 36, 1), res.message));
+    } on ESewaPaymentException catch (e) {
+      _scaffoldKey.currentState
+          .showSnackBar(_buildSnackBar(Colors.red, e.message));
+    }
   }
 
   Widget _buildSnackBar(Color color, String msg) {

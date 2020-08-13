@@ -1,4 +1,4 @@
-include ':app', ':eSewaSdk'
+include ':app'
 
 def flutterProjectRoot = rootProject.projectDir.parentFile.toPath()
 
