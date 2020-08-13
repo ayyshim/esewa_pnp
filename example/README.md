@@ -1,24 +1,29 @@
-# esewa_pnp_example
+# esewa_pnp (example)
 
-[![pub package](https://img.shields.io/badge/pub-v.0.1.0-green)](https://pub.dartlang.org/packages/esewa_pnp) 
+[![pub package](https://img.shields.io/badge/pub-v.0.2.0-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
-**esewa_pnp** is a flutter plugin that let&#x27;s developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
+**esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
 ## How to install
 
-* Add following attribute inside your AndroidMainfest.xml
+- Depend on it
+
+  ```yaml
+  dependencies:
+  esewa_pnp: ^0.2.0
+  ```
+
+- [Android] Add following attribute inside your AndroidMainfest.xml
 
   ```xml
    <application
       ...
-  	android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar"
       ...>
   ...
   </application>
-  
-  ```
 
-  
+  ```
 
 ## Usage
 
@@ -28,10 +33,11 @@
 ...
 
 ESewaConfiguration _configuration = ESewaConfiguration(
-	clientID: "<Client-ID>",
+    clientID: "<Client-ID>",
     secretKey: "<Secret-Key>",
     environment: ESewaConfiguration.ENVIRONMENT_TEST //ENVIRONMENT_LIVE
 );
+...
 ```
 
 > `clientID` and `secretKey` values are provided by eSewa to its merchant/client and is unique for each. For development phase, you can use the following credentials:
@@ -42,7 +48,7 @@ ESewaConfiguration _configuration = ESewaConfiguration(
 
 2. Create **ESewaPnp** object and pass configuration.
 
-```dart
+```
 ...
 ESewaPnp _eSewaPnp = ESewaPnp(configuration: _configuration);
 ```
@@ -52,11 +58,12 @@ ESewaPnp _eSewaPnp = ESewaPnp(configuration: _configuration);
 ```dart
 ...
 ESewaPayment _payment = ESewaPayment(
-	amount: <ANY_INTEGER_VALUE>,
+    amount: <ANY_INTEGER_VALUE>,
     productName: "<Product-Name>",
     productID: "<Unique-Product-ID>",
     callBackURL: "<Call-Back-URL>"
 );
+...
 ```
 
 4. Now call `initPayment` method.
@@ -64,54 +71,49 @@ ESewaPayment _payment = ESewaPayment(
 ```dart
 ...
 final _res = await _eSewaPnp.initPayment(payment: _payment);
+...
 ```
 
-`initPayment` will return an `Either` type (ref. [dart functional programming with dartz](https://pub.dev/packages/dartz)) . Response can be either `Failure` type or `Result` type.
-
-`Failure` type indicates the payment process fail.
-
-`Result` type indicates the successful payment.
-
-
-
-5. Determine application behavior according to the response
+5. Determine application behavior according to the response. Wrap the `.initPayment` method inside try-catch block.
 
 ```dart
 ...
-_res.fold(
-	(l) {
-		// TODO:: Stuffs after failure.
-	},
-	(r) {
-		// TODO:: Stuffs after successful payment.
-	}
-);
+try {
+	final _res = await _eSewaPnp.initPayement(payment: _payment);
+	// Handle success
+} on ESewaPaymentException catch(e) {
+	// Handle error
+}
+...
 ```
 
+### ❌ ESewaPaymentException
 
+**ESewaPaymentException** class is thrown when payment process fails.
 
-### ❌ Failure
+- `.message` [String] : returns the error message
 
-Failure class is returned when payment process fails.
+### ✅ ESewaResult
 
-* `.message` [String] : returns the error message
+**ESewaResult** is returned when payment process successful.
 
-### ✅ Result
+- `.message` [String] : returns readable success message
+- `.productId` [String] : returns product id of the product customer paid for
+- `.productName` [String] : returns product name of the product customer paid for
+- `.totalAmount` [String] : returns total amount customer paid
+- `.date` [String] : returns the date of transaction
+- `.status` [String] : returns the transaction status
+- `.referenceId` [String] : returns the transaction reference id
 
-Result class is returned when payment process successful.
+# Platform Support
 
-* `.message` [String] : returns readable success message
-* `.productId` [String] : returns product id of the product customer paid for
-* `.productName` [String] : returns product name of the product customer paid for
-* `.totalAmount` [String] : returns total amount customer paid
-* `.date` [String] : returns the date of transaction
-* `.status` [String] : returns the transaction status
-* `.referenceId` [String] : returns the transaction reference id
-
-
+| Platform | Status |
+| :------- | :----- |
+| Android  | ✅     |
+| iOS      | 🔜     |
 
 ## 👨‍🦱 Author
 
 **[Ashim Upadhaya](https://www.github.com/ayyshim)**
 
-> This plugin can only be used on android platform because I don't have mac.
+Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/esewa_pnp/tree/master/example)
