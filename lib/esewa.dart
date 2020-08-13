@@ -3,7 +3,7 @@
  * Author : Ashim Upadhaya
  */
 
-import 'package:meta/meta.dart';
+import 'package:flutter/foundation.dart';
 
 /// [ESewaConfiguration] class holds the config value of merchant id and environment.
 class ESewaConfiguration {
