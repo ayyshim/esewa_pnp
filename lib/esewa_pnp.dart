@@ -4,8 +4,9 @@
  */
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:esewa_pnp/esewa.dart';
 import 'package:flutter/services.dart';
+import 'esewa.dart';
+import 'dart:io' show Platform;
 
 /// **[EsewaPaymentException]** will be thrown if any kind of error/exception is caught
 /// on native side.
@@ -44,7 +45,7 @@ class ESewaResult {
 
   factory ESewaResult.fromMap(Map<String, dynamic> response) {
     return ESewaResult._(
-      productId: response["productId"],
+      productId: response["productID"] ?? response["productId"],
       productName: response["productName"],
       totalAmount: response["totalAmount"],
       message: response["message"]["successMessage"],
@@ -53,6 +54,19 @@ class ESewaResult {
       referenceId: response["transactionDetails"]["referenceId"],
     );
   }
+
+  @override
+  String toString() => '''
+    ESewaResult {
+      productId: $productId,
+      productName: $productName,
+      totalAmount: $totalAmount,
+      message: $message,
+      date: $date,
+      status: $status,
+      referenceId: $referenceId,
+    }
+  ''';
 }
 
 class ESewaPnp {
@@ -76,11 +90,18 @@ class ESewaPnp {
     };
 
     final response = await _channel.invokeMethod('initPayment', arguments);
+
     Map<String, dynamic> responseMap = Map<String, dynamic>.from(response);
     if (!responseMap["isSuccess"]) {
       throw ESewaPaymentException(message: responseMap["message"]);
     } else {
-      return ESewaResult.fromMap(json.decode(responseMap["message"]));
+      if (Platform.isAndroid) {
+        return ESewaResult.fromMap(json.decode(responseMap["message"]));
+      } else {
+        Map<String, dynamic> resp =
+            Map<String, dynamic>.from(responseMap["message"]);
+        return ESewaResult.fromMap(resp);
+      }
     }
   }
 }

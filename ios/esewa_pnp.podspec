@@ -4,18 +4,21 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'esewa_pnp'
-  s.version          = '0.0.1'
-  s.summary          = 'esewa_pnp let&#x27;s you integrate native esewa payment method in your flutter application.'
+  s.version          = '1.0.0'
+  s.summary          = 'Integrate native eSewa payment method in your flutter application with ease.'
   s.description      = <<-DESC
-esewa_pnp let&#x27;s you integrate native esewa payment method in your flutter application.
+  Integrate native eSewa payment method in your flutter application with ease.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'http://github.com/ayyshim/esewa_pnp'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Ashim Upadhaya' => 'justayyme@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
   s.platform = :ios, '8.0'
+  s.preserve_paths = 'EsewaSDK.framework'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-framework EsewaSDK' }
+  s.vendored_frameworks = 'EsewaSDK.framework'
 
   # Flutter.framework does not contain a i386 slice. Only x86_64 simulators are supported.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'VALID_ARCHS[sdk=iphonesimulator*]' => 'x86_64' }

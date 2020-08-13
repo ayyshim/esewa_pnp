@@ -21,3 +21,5 @@ flutter:
       android:
         package: np.com.uashim.esewa_pnp
         pluginClass: EsewaPnpPlugin
+      ios:
+        pluginClass: EsewaPnpPlugin

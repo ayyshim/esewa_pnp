@@ -40,6 +40,7 @@ class _MyAppState extends State<MyApp> {
         key: _scaffoldKey,
         appBar: AppBar(
           title: Text("ESewa PNP"),
+          elevation: 0,
         ),
         body: Container(
           padding: EdgeInsets.all(20),
@@ -63,6 +64,7 @@ class _MyAppState extends State<MyApp> {
               Container(
                 width: double.infinity,
                 child: RaisedButton(
+                  elevation: 0,
                   color: Color.fromRGBO(65, 161, 36, 1),
                   onPressed: () {
                     pay();
@@ -99,7 +101,7 @@ class _MyAppState extends State<MyApp> {
     );
     try {
       final res = await _esewaPnp.initPayment(payment: eSewaPayment);
-
+      print(res.toString());
       _scaffoldKey.currentState.showSnackBar(
           _buildSnackBar(Color.fromRGBO(65, 161, 36, 1), res.message));
     } on ESewaPaymentException catch (e) {
