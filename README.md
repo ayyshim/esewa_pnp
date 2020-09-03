@@ -1,6 +1,6 @@
-# esewa_pnp
+# esewa_pnp (simulator branch)
 
-[![pub package](https://img.shields.io/badge/pub-v.0.2.0-green)](https://pub.dartlang.org/packages/esewa_pnp)
+[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.0-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
 **esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
@@ -10,7 +10,7 @@
 
   ```yaml
   dependencies:
-  	esewa_pnp: ^0.2.0
+  	esewa_pnp: ^1.0.0
   ```
 
 - [Android] Add following attribute inside your AndroidMainfest.xml
@@ -22,10 +22,20 @@
       ...>
   ...
   </application>
-
+  
   ```
 
+- [iOS] **esewa_pnp** (version 1.0.0) iOS can not be tested on simulator. For that you will need to depend on plugin from plugin's GitHub repository "simulator" branch.
 
+  ```yaml
+  dependencies:
+  	# esewa_pnp: ^1.0.0 # Use it on production app or while testing esewa_pnp on real physical iOS device.
+  	esewa_pnp:
+  		git: https://github.com/ayyshim/esewa_pnp.git
+  		ref: simulator
+  ```
+
+  
 
 ## Usage
 
@@ -91,13 +101,15 @@ try {
 
 
 
-### ❌ ESewaPaymentException
+## ESewaPaymentException
 
 **ESewaPaymentException** class is thrown when payment process fails.
 
 - `.message` [String] : returns the error message
 
-### ✅ ESewaResult
+### 
+
+## ESewaResult
 
 **ESewaResult** is returned when payment process successful.
 
@@ -116,7 +128,7 @@ try {
 | Platform | Status |
 | :------- | :----- |
 | Android  | ✅      |
-| iOS      | 🔜      |
+| iOS      | ✅      |
 
 
 
@@ -125,3 +137,13 @@ try {
 **[Ashim Upadhaya](https://www.github.com/ayyshim)**
 
 Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/esewa_pnp/tree/master/example)
+
+
+
+## 🌟 Starware
+
+esewa_pnp is Starware.  
+This means you're free to use the project, as long as you star its GitHub repository.  
+
+Your appreciation makes us grow and glow up. ⭐
+
