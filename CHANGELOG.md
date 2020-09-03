@@ -13,3 +13,6 @@
 - `Failure` class has been changed to `ESewaPaymentException` class which implements `Exception`
 - Plugin example updated.
 - README updated. 
+
+## 1.0.0
+- iOS support added.
