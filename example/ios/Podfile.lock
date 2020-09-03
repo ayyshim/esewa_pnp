@@ -1,0 +1,22 @@
+PODS:
+  - esewa_pnp (1.0.0):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - esewa_pnp (from `.symlinks/plugins/esewa_pnp/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  esewa_pnp:
+    :path: ".symlinks/plugins/esewa_pnp/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  esewa_pnp: ab3a28600bdb024c8d85ae81e71dcea61af114c3
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.9.3
