@@ -1,10 +1,13 @@
-## 0.1.0
 
-- Initial release
 
-## 0.1.0+1
+## 1.0.0+1
 
-- "esewa_pnp integration walk through" youtube video link added to README.md
+- README.md corrected.
+- CHANGELOG.md corrected.
+
+## 1.0.0
+
+- iOS support added.
 
 ## 0.2.0
 
@@ -14,5 +17,10 @@
 - Plugin example updated.
 - README updated. 
 
-## 1.0.0
-- iOS support added.
+## 0.1.0+1
+
+- "esewa_pnp integration walk through" youtube video link added to README.md
+
+## 0.1.0
+
+- Initial release
