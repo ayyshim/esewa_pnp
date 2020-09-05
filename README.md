@@ -22,17 +22,18 @@
       ...>
   ...
   </application>
-
-  ```
   
+  ```
+
 - [iOS] **esewa_pnp** (version 1.0.0) iOS can not be tested on simulator. For that you will need to depend on plugin from plugin's GitHub repository "simulator" branch.
 
   ```yaml
   dependencies:
   	# esewa_pnp: ^1.0.0 # Use it on production app or while testing esewa_pnp on real physical iOS device.
   	esewa_pnp:
-  		git: https://github.com/ayyshim/esewa_pnp.git
-  		ref: simulator
+  		git: 
+  			url: git://github.com/ayyshim/esewa_pnp.git
+  			ref: simulator
   ```
 
   
@@ -146,4 +147,3 @@ esewa_pnp is Starware.
 This means you're free to use the project, as long as you star its GitHub repository.  
 
 Your appreciation makes us grow and glow up. ⭐
-
