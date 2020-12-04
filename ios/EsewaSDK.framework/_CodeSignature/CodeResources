@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		4+wAR6btZeIwqsfji2Uq+xNc0Ss=
+		zTN1My5oecthhpYXmYzhIeJ0vqg=
 		</data>
 		<key>Headers/Encryptor.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/EsewaSDK-Swift.h</key>
 		<data>
-		6cWdEQCUDhlkJtz50zm9XQwQmks=
+		KzjLpQQatZOYSzM+qCDLz1J0/yQ=
 		</data>
 		<key>Headers/EsewaSDK.h</key>
 		<data>
@@ -26,31 +26,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		wgPpEaLE4pr26M6FjTWBEcneD3I=
+		pS9scmpYSYVrhv6vpkgt09ekJZM=
 		</data>
 		<key>Modules/EsewaSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		92pdl/oLqYm2Yzjxmqkq240QaHc=
+		aBd6naFdEtGm+u+tJdAlvTvEaN0=
 		</data>
 		<key>Modules/EsewaSDK.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		92pdl/oLqYm2Yzjxmqkq240QaHc=
+		aBd6naFdEtGm+u+tJdAlvTvEaN0=
 		</data>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		SgX4NFDDpRPRzzijmCVeUyYyqNQ=
+		zDXGb1VDlENw5glErcRpH1Za1Yk=
 		</data>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		f9mp+b2f/fkgRRgAAbIf89bHK+A=
+		0EuHLMl1Y6N56ghZ4UJ+Ao0ZUrQ=
 		</data>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		SgX4NFDDpRPRzzijmCVeUyYyqNQ=
+		zDXGb1VDlENw5glErcRpH1Za1Yk=
 		</data>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		f9mp+b2f/fkgRRgAAbIf89bHK+A=
+		0EuHLMl1Y6N56ghZ4UJ+Ao0ZUrQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,31 +58,31 @@
 		</data>
 		<key>esewa.storyboardc/Info.plist</key>
 		<data>
-		oO9Yytf0x7xm3jS6iqDaRjKr/PI=
+		NHNPZQKSQgFeCrBzBMKLs7HNuQE=
 		</data>
 		<key>esewa.storyboardc/KOU-XQ-l1G-view-uqb-M3-Q6h.nib</key>
 		<data>
-		lInF2lbBd94SVN0zkvyqx3yFjXU=
+		jKejqKtueRePNnXD9E3XulaV9QQ=
 		</data>
 		<key>esewa.storyboardc/Ll9-Fn-d3K-view-r8v-I0-28P.nib</key>
 		<data>
-		UYHqVKZXG8KeExLyTIZyY3+wioc=
+		BzRYEBFfUrm6SmHTKVHSdAF0DI8=
 		</data>
 		<key>esewa.storyboardc/RequestViewController.nib</key>
 		<data>
-		XEJxTv4CPRrn/Zwv2+B1IdWFHIM=
+		06R5NcI+Gy0sxm61xyz+PLLvhRE=
 		</data>
 		<key>esewa.storyboardc/SdkLoginViewController.nib</key>
 		<data>
-		VbaEqG3ErUtG1clFWfC7yhxm7co=
+		UdMUy8iZ2Mjbo6H5UzUU1pob2+w=
 		</data>
 		<key>esewa.storyboardc/SdkPaymentViewController.nib</key>
 		<data>
-		+togQ4uHBNmYVMr1hyqn3EZ0NlY=
+		He01CxQc1tZCrjLdFMCQldr7CF8=
 		</data>
 		<key>esewa.storyboardc/w8i-74-ie2-view-MCj-gS-afU.nib</key>
 		<data>
-		mYCARgqNodNbME8OSoPr1xbjMC8=
+		ax3a06c6gme8idRtU1ujheIOt1g=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -91,11 +91,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4+wAR6btZeIwqsfji2Uq+xNc0Ss=
+			zTN1My5oecthhpYXmYzhIeJ0vqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			9ZOjBeHVe0JiCvYA31Fuwd7+k/Y4sb/1keSIr/cwlK8=
+			ZKyRaxFxa22gRPNOlBHaJGj1S0qEd3KiKU/Ai+y358Q=
 			</data>
 		</dict>
 		<key>Headers/Encryptor.h</key>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6cWdEQCUDhlkJtz50zm9XQwQmks=
+			KzjLpQQatZOYSzM+qCDLz1J0/yQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			lEhxMj3nfVapN1SWQO1SOY/rqMo1XQWGFNxKWBsiLYY=
+			KOZf5SvxMVF5Q3PMR//nSFmqpDcnK8aFrrkYV/pLvAE=
 			</data>
 		</dict>
 		<key>Headers/EsewaSDK.h</key>
@@ -146,66 +146,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			92pdl/oLqYm2Yzjxmqkq240QaHc=
+			aBd6naFdEtGm+u+tJdAlvTvEaN0=
 			</data>
 			<key>hash2</key>
 			<data>
-			dxuiRoj4tB+xYseSt4e0dTcm0gHSO9oowDHQcY8WxhM=
+			c37H0nKRvoBmk9EnkA724kDBFcBuwodnEpYfEru8HSI=
 			</data>
 		</dict>
 		<key>Modules/EsewaSDK.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			92pdl/oLqYm2Yzjxmqkq240QaHc=
+			aBd6naFdEtGm+u+tJdAlvTvEaN0=
 			</data>
 			<key>hash2</key>
 			<data>
-			dxuiRoj4tB+xYseSt4e0dTcm0gHSO9oowDHQcY8WxhM=
+			c37H0nKRvoBmk9EnkA724kDBFcBuwodnEpYfEru8HSI=
 			</data>
 		</dict>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SgX4NFDDpRPRzzijmCVeUyYyqNQ=
+			zDXGb1VDlENw5glErcRpH1Za1Yk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zx5veAbWzQHM6YyH/YpT4ZR/uuzxVtN9ZAr/pNI5CV0=
+			YOQvpCGdZXg/jXiH1LFGQcqKe0TzCcKp5VVS3b6s1Tk=
 			</data>
 		</dict>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f9mp+b2f/fkgRRgAAbIf89bHK+A=
+			0EuHLMl1Y6N56ghZ4UJ+Ao0ZUrQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			N11/pnuGYIHs7P3vQo3ABcZi3GMzI236VO9XXdH21FE=
+			2/ZVo1Zyu6Bk+ljZTvEE9Vnihgy+At/8PKE/v9WH5As=
 			</data>
 		</dict>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			SgX4NFDDpRPRzzijmCVeUyYyqNQ=
+			zDXGb1VDlENw5glErcRpH1Za1Yk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zx5veAbWzQHM6YyH/YpT4ZR/uuzxVtN9ZAr/pNI5CV0=
+			YOQvpCGdZXg/jXiH1LFGQcqKe0TzCcKp5VVS3b6s1Tk=
 			</data>
 		</dict>
 		<key>Modules/EsewaSDK.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f9mp+b2f/fkgRRgAAbIf89bHK+A=
+			0EuHLMl1Y6N56ghZ4UJ+Ao0ZUrQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			N11/pnuGYIHs7P3vQo3ABcZi3GMzI236VO9XXdH21FE=
+			2/ZVo1Zyu6Bk+ljZTvEE9Vnihgy+At/8PKE/v9WH5As=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -223,77 +223,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oO9Yytf0x7xm3jS6iqDaRjKr/PI=
+			NHNPZQKSQgFeCrBzBMKLs7HNuQE=
 			</data>
 			<key>hash2</key>
 			<data>
-			jL6pzBGVIULdMtsm1LFiAkhuLpu2dE4aVtQDS1t6MTw=
+			G8gHi7DO/Tv2mFP3rsCmGl6fZVoSQ7zp8yMnS7dDUqo=
 			</data>
 		</dict>
 		<key>esewa.storyboardc/KOU-XQ-l1G-view-uqb-M3-Q6h.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			lInF2lbBd94SVN0zkvyqx3yFjXU=
+			jKejqKtueRePNnXD9E3XulaV9QQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			p7YpurDfhX0XmMo4EXack1iLVmIJ5l4QkIW9IaYdqgo=
+			AXdiPuvbL1Fxhr8I+98lL2Py2o6b0bysLjmBXELgkvs=
 			</data>
 		</dict>
 		<key>esewa.storyboardc/Ll9-Fn-d3K-view-r8v-I0-28P.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UYHqVKZXG8KeExLyTIZyY3+wioc=
+			BzRYEBFfUrm6SmHTKVHSdAF0DI8=
 			</data>
 			<key>hash2</key>
 			<data>
-			KJ7aooNW/2AGXEHbfXysiIrdyu1a4I3ozzmC9+GAJpY=
+			MdoIx7JHelbF9kTcwDATLqcut9mCfaDSwWasuiZVWEc=
 			</data>
 		</dict>
 		<key>esewa.storyboardc/RequestViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XEJxTv4CPRrn/Zwv2+B1IdWFHIM=
+			06R5NcI+Gy0sxm61xyz+PLLvhRE=
 			</data>
 			<key>hash2</key>
 			<data>
-			AsnfhMyIjk0NhVVELIvecLnSUK96ceMlqmJSrwhPmOI=
+			8F2XiXR9OlvKh8Ph89jmveBm3SzBlt9oiGhCXJxRCXU=
 			</data>
 		</dict>
 		<key>esewa.storyboardc/SdkLoginViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VbaEqG3ErUtG1clFWfC7yhxm7co=
+			UdMUy8iZ2Mjbo6H5UzUU1pob2+w=
 			</data>
 			<key>hash2</key>
 			<data>
-			szFaHfPWT0CX75FtdC34aAqZSfE3tGwXZwUHoy+rB4c=
+			iNpf0wYPPYvnEBK9dNx5pvpVYgNv3OSDd9vzh7/fDvU=
 			</data>
 		</dict>
 		<key>esewa.storyboardc/SdkPaymentViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+togQ4uHBNmYVMr1hyqn3EZ0NlY=
+			He01CxQc1tZCrjLdFMCQldr7CF8=
 			</data>
 			<key>hash2</key>
 			<data>
-			/k3Nn14mlZmniUe+mbkTGPCdjhHPPInrVAJTkPDddgM=
+			c1uRAJ0Ho63NAWL8gfSqmfyIoNEI2SKOtOoxYcTDua0=
 			</data>
 		</dict>
 		<key>esewa.storyboardc/w8i-74-ie2-view-MCj-gS-afU.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mYCARgqNodNbME8OSoPr1xbjMC8=
+			ax3a06c6gme8idRtU1ujheIOt1g=
 			</data>
 			<key>hash2</key>
 			<data>
-			IH19caXG7dn739QpgAl4bZgVc6V4NWnPm4WbCZnvsKI=
+			M7N7BG9ce4y7VIqqDt238V+hAE8nA74gUCxodAdTSd4=
 			</data>
 		</dict>
 	</dict>
