@@ -146,4 +146,8 @@ Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/
 esewa_pnp is Starware.  
 This means you're free to use the project, as long as you star its GitHub repository.  
 
+<<<<<<< HEAD
 Your appreciation makes us grow and glow up. ⭐
+=======
+Your appreciation makes us grow and glow up. ⭐
+>>>>>>> 80da944e6130b9db4cacee8e186291f994b41d42
