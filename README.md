@@ -1,6 +1,6 @@
 # esewa_pnp
 
-[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.0-green)](https://pub.dartlang.org/packages/esewa_pnp)
+[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.2-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
 **esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
@@ -10,7 +10,7 @@
 
   ```yaml
   dependencies:
-  	esewa_pnp: ^1.0.1
+  	esewa_pnp: ^1.0.2
   ```
 
 - [Android] Add following attribute inside your AndroidMainfest.xml
@@ -22,21 +22,19 @@
       ...>
   ...
   </application>
-  
+
   ```
 
-- [iOS] **esewa_pnp** (version 1.0.0) iOS can not be tested on simulator. For that you will need to depend on plugin from plugin's GitHub repository "simulator" branch.
+- [iOS] **esewa_pnp** (version ^1.0.0) iOS can not be tested on simulator. For that you will need to depend on plugin from plugin's GitHub repository "simulator" branch.
 
   ```yaml
   dependencies:
-  	# esewa_pnp: ^1.0.1 # Use it on production app or while testing esewa_pnp on real physical iOS device.
+  	# esewa_pnp: ^1.0.2 # Use it on production app or while testing esewa_pnp on real physical iOS device.
   	esewa_pnp:
-  		git: 
+  		git:
   			url: git://github.com/ayyshim/esewa_pnp.git
   			ref: simulator
   ```
-
-  
 
 ## Usage
 
@@ -100,15 +98,13 @@ try {
 ...
 ```
 
-
-
 ## ESewaPaymentException
 
 **ESewaPaymentException** class is thrown when payment process fails.
 
 - `.message` [String] : returns the error message
 
-### 
+###
 
 ## ESewaResult
 
@@ -122,16 +118,12 @@ try {
 - `.status` [String] : returns the transaction status
 - `.referenceId` [String] : returns the transaction reference id
 
-
-
 # Platform Support
 
 | Platform | Status |
 | :------- | :----- |
-| Android  | ✅      |
-| iOS      | ✅      |
-
-
+| Android  | ✅     |
+| iOS      | ✅     |
 
 ## 👨‍🦱 Author
 
@@ -139,15 +131,7 @@ try {
 
 Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/esewa_pnp/tree/master/example)
 
-
-
 ## 🌟 Starware
 
 esewa_pnp is Starware.  
-This means you're free to use the project, as long as you star its GitHub repository.  
-
-<<<<<<< HEAD
-Your appreciation makes us grow and glow up. ⭐
-=======
-Your appreciation makes us grow and glow up. ⭐
->>>>>>> 80da944e6130b9db4cacee8e186291f994b41d42
+This means you're free to use the project, as long as you star its GitHub repository.
