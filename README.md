@@ -1,6 +1,6 @@
 # esewa_pnp
 
-[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.2-green)](https://pub.dartlang.org/packages/esewa_pnp)
+[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.3-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
 **esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
@@ -10,7 +10,7 @@
 
   ```yaml
   dependencies:
-  	esewa_pnp: ^1.0.2
+  	esewa_pnp: ^1.0.3
   ```
 
 - [Android] Add following attribute inside your AndroidMainfest.xml
@@ -25,7 +25,7 @@
 
   ```
 
-- [iOS] **esewa_pnp** (version ^1.0.0) iOS can not be tested on simulator. For that you will need to depend on plugin from plugin's GitHub repository "simulator" branch.
+- [iOS] **esewa_pnp** (version ^1.0.0) iOS can not be tested on simulator. For that you will need to depend on plugin from plugin's GitHub repository "dev" branch.
 
   ```yaml
   dependencies:
@@ -33,7 +33,7 @@
   	esewa_pnp:
   		git:
   			url: git://github.com/ayyshim/esewa_pnp.git
-  			ref: simulator
+  			ref: dev
   ```
 
 ## Usage

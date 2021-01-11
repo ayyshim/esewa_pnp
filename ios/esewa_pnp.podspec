@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '8.0'
+  s.platform = :ios, '9.0'
   s.preserve_paths = 'EsewaSDK.framework'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-framework EsewaSDK' }
   s.vendored_frameworks = 'EsewaSDK.framework'

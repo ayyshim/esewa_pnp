@@ -1,3 +1,6 @@
+## 1.0.0+3
+- Updated framework to support latest swift version 5.3.2
+
 ## 1.0.0+2
 - Updated framework to support Xcode 12.1
 
