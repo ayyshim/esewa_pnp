@@ -1,6 +1,6 @@
 name: esewa_pnp
 description: Integrate native eSewa payment method in your flutter application with ease.
-version: 1.0.0+3
+version: 1.0.3
 homepage: https://github.com/ayyshim/esewa_pnp/
 
 environment:
