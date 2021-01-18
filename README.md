@@ -1,6 +1,6 @@
 # esewa_pnp (Dev)
 
-[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.3-green)](https://pub.dartlang.org/packages/esewa_pnp)
+[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.4-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
 **esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
@@ -109,6 +109,91 @@ try {
 - `.date` [String] : returns the date of transaction
 - `.status` [String] : returns the transaction status
 - `.referenceId` [String] : returns the transaction reference id
+
+## 🆕 ESewaPaymentButton
+
+**ESewaPaymentButton** is a customizable button widget. It takes `ESewaPnp`, 6 required named parameters and 8 optional parameters.
+
+To use this button you must [download assets](https://drive.google.com/file/d/1T8M8yRh3x2BTs6xUwYkt2uH0x_AyfaBI/view?usp=sharing) and paste it inside your `assets` folder of your project.
+Add following line inside your pubspec.yaml file too.
+
+```yaml
+  ...
+  flutter:
+    assets:
+      - assets/esewa/
+  ...
+```
+
+Example #1 (Default):
+
+```dart
+  ...
+  ESewaPaymentButton(
+    _esewaPnp,
+    amount: 800,
+    callBackURL: "https://example.com",
+    productId: "abc123",
+    productName: "ESewa Pnp Example",
+    onSuccess: (ESewaResult result) {
+      // Do something with Result
+    },
+    onFailure: (ESewaPaymentException e) {
+      // Do something with Error
+    },
+  ),
+  ...
+```
+
+Example #2 (White background):
+
+Changing button color will also result to dyanmically change in label color and esewa logo varient (dark/light).
+
+```dart
+  ...
+  ESewaPaymentButton(
+    _esewaPnp,
+    amount: 800,
+    callBackURL: "https://example.com",
+    productId: "abc123",
+    productName: "ESewa Pnp Example",
+    onSuccess: (ESewaResult result) {
+      // Do something with Result
+    },
+    onFailure: (ESewaPaymentException e) {
+      // Do something with Error
+    },
+    color: Color(0xFFFFFFF), // White background
+  ),
+  ..
+```
+
+Example #3 (with labelBuilder):
+
+```dart
+  ...
+  ESewaPaymentButton(
+    _esewaPnp,
+    amount: 800,
+    callBackURL: "https://example.com",
+    productId: "abc123",
+    productName: "ESewa Pnp Example",
+    onSuccess: (ESewaResult result) {
+      // Do something with Result
+    },
+    onFailure: (ESewaPaymentException e) {
+      // Do something with Error
+    },
+    color: Color(0xFF60BB47), // Green background
+    labelBuilder: (int amount, Widget esewaLogo) {
+      return Text("Pay Rs.$amount");
+    }
+  ),
+  ..
+```
+
+Output:
+![Screenshot](./buttons_screenshot.png)
 
 # Platform Support
 

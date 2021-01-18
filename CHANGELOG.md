@@ -1,7 +1,13 @@
+## 1.0.0+4
+
+- Added : ESewaPaymentButton Widget
+
 ## 1.0.0+3
+
 - Updated framework to support Swift 5.3.2
 
 ## 1.0.0+2
+
 - Updated framework to support Xcode 12.1
 
 ## 1.0.0+1
@@ -19,7 +25,7 @@
 - `Result` class has been changed to `ESewaResult`.
 - `Failure` class has been changed to `ESewaPaymentException` class which implements `Exception`
 - Plugin example updated.
-- README updated. 
+- README updated.
 
 ## 0.1.0+1
 
