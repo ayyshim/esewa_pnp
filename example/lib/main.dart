@@ -61,22 +61,20 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 height: 16,
               ),
-              Container(
-                width: double.infinity,
-                child: RaisedButton(
-                  elevation: 0,
-                  color: Color.fromRGBO(65, 161, 36, 1),
-                  onPressed: () {
-                    pay();
-                  },
-                  child: Text(
-                    "Pay",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
-                ),
+              ESewaPaymentButton(
+                this._esewaPnp,
+                amount: _amount,
+                callBackURL: "https://example.com",
+                productId: "abc123",
+                productName: "Flutter SDK Example",
+                onSuccess: (result) {
+                  _scaffoldKey.currentState.showSnackBar(_buildSnackBar(
+                      Color.fromRGBO(65, 161, 36, 1), result.message));
+                },
+                onFailure: (e) {
+                  _scaffoldKey.currentState
+                      .showSnackBar(_buildSnackBar(Colors.red, e.message));
+                },
               ),
               SizedBox(
                 height: 84,
@@ -90,24 +88,6 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     );
-  }
-
-  Future<void> pay() async {
-    ESewaPayment eSewaPayment = ESewaPayment(
-      amount: _amount,
-      productName: "Test Product",
-      productID: "abc123001",
-      callBackURL: "https://www.uashim.com.np/",
-    );
-    try {
-      final res = await _esewaPnp.initPayment(payment: eSewaPayment);
-      print(res.toString());
-      _scaffoldKey.currentState.showSnackBar(
-          _buildSnackBar(Color.fromRGBO(65, 161, 36, 1), res.message));
-    } on ESewaPaymentException catch (e) {
-      _scaffoldKey.currentState
-          .showSnackBar(_buildSnackBar(Colors.red, e.message));
-    }
   }
 
   Widget _buildSnackBar(Color color, String msg) {

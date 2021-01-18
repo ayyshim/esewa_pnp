@@ -4,6 +4,7 @@
  */
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'esewa.dart';
 import 'dart:io' show Platform;
@@ -103,5 +104,138 @@ class ESewaPnp {
         return ESewaResult.fromMap(resp);
       }
     }
+  }
+}
+
+/// **[ESewaPaymentButton]** is a customizable eSewa payment button.
+// ignore: must_be_immutable
+class ESewaPaymentButton extends StatelessWidget {
+  /// Pass the object of **[ESewaPnp]**.
+  final ESewaPnp esewa;
+
+  /// Payable amount in **[int]**.
+  final int amount;
+
+  /// Product ID
+  final String productId;
+
+  /// Product Name
+  final String productName;
+
+  /// Callback URL
+  final String callBackURL;
+
+  /// This method will trigger if the payment is successfull.
+  final Function(ESewaResult result) onSuccess;
+
+  /// This method will trigger if the payment is not successfull.
+  final Function(ESewaPaymentException exception) onFailure;
+
+  /// Customize button label if you don't want default label to be shown.
+  /// You will get amount and esewaLogo widget.
+  final Widget Function(int amount, Widget esewaLogo) labelBuilder;
+
+  final double elevation;
+  final double focusElevation;
+  final double highlightElevation;
+  final double hoverElevation;
+  final double height;
+  final double width;
+  final Color color;
+
+  Widget _esewaLogo;
+  Color _textColor;
+  Widget _label;
+
+  ESewaPaymentButton(
+    this.esewa, {
+    Key key,
+    @required this.amount,
+    @required this.productId,
+    @required this.productName,
+    @required this.callBackURL,
+    @required this.onSuccess,
+    @required this.onFailure,
+    this.labelBuilder,
+    this.elevation = 4,
+    this.height,
+    this.width,
+    this.color,
+    this.focusElevation,
+    this.highlightElevation,
+    this.hoverElevation,
+  }) {
+    this._esewaLogo = color != null
+        ? (color.computeLuminance() > 0.5
+            ? Image.asset(
+                "assets/esewa/logo_dark.png",
+                height: 24,
+                width: 54,
+              )
+            : Image.asset(
+                "assets/esewa/logo.png",
+                height: 24,
+                width: 54,
+              ))
+        : Image.asset(
+            "assets/esewa/logo.png",
+            height: 24,
+            width: 54,
+          );
+
+    this._textColor = color != null
+        ? (color.computeLuminance() < 0.5
+            ? Color(0xFFFFFFFF)
+            : Color(0xFF000000))
+        : Color(0xFFFFFFFF);
+
+    this._label = this.labelBuilder != null
+        ? this.labelBuilder(
+            this.amount,
+            _esewaLogo,
+          )
+        : Row(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Pay now with ",
+              ),
+              _esewaLogo,
+            ],
+          );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: this.height,
+      width: this.width,
+      child: RaisedButton(
+        focusElevation: this.focusElevation,
+        highlightElevation: this.highlightElevation,
+        hoverElevation: this.hoverElevation,
+        elevation: this.elevation,
+        onPressed: () async {
+          ESewaPayment _payment = ESewaPayment(
+            amount: this.amount,
+            productName: this.productName,
+            productID: this.productId,
+            callBackURL: this.callBackURL,
+          );
+
+          try {
+            final _res = await this.esewa.initPayment(payment: _payment);
+            this.onSuccess(_res);
+          } on ESewaPaymentException catch (ex) {
+            this.onFailure(ex);
+          }
+        },
+        child: this._label,
+        textColor: _textColor,
+        color: color ?? Color(0xFF000000),
+      ),
+    );
   }
 }
