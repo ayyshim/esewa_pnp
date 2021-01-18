@@ -122,6 +122,17 @@ try {
 
 **ESewaPaymentButton** is a customizable button widget. It takes `ESewaPnp`, 6 required named parameters and 8 optional parameters.
 
+To use this button you must [download assets](https://drive.google.com/file/d/1T8M8yRh3x2BTs6xUwYkt2uH0x_AyfaBI/view?usp=sharing) and paste it inside your `assets` folder of your project.
+Add following line inside your pubspec.yaml file too.
+
+```yaml
+  ...
+  flutter:
+    assets:
+      - assets/esewa/
+  ...
+```
+
 Example #1 (Default):
 
 ```dart
