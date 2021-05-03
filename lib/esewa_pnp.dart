@@ -113,8 +113,8 @@ class ESewaPaymentButton extends StatelessWidget {
   /// Pass the object of **[ESewaPnp]**.
   final ESewaPnp esewa;
 
-  /// Payable amount in **[int]**.
-  final int amount;
+  /// Payable amount in **[double]**.
+  final double amount;
 
   /// Product ID
   final String productId;
@@ -133,7 +133,7 @@ class ESewaPaymentButton extends StatelessWidget {
 
   /// Customize button label if you don't want default label to be shown.
   /// You will get amount and esewaLogo widget.
-  final Widget Function(int amount, Widget esewaLogo) labelBuilder;
+  final Widget Function(double amount, Widget esewaLogo) labelBuilder;
 
   final double elevation;
   final double focusElevation;

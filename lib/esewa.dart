@@ -50,7 +50,7 @@ class ESewaConfiguration {
 /// [ESewaPayment] Create the payment information with payloads passed in it
 class ESewaPayment {
   // arguments
-  int _productPrice;
+  double _productPrice;
   String _productName;
   String _productID;
   String _callBackURL;
@@ -66,7 +66,7 @@ class ESewaPayment {
   /// **callBackURL** : API exposed at merchant/client`server where eSewa sends a copy of proof of payment after successful payment
   // constructor
   ESewaPayment(
-      {@required int amount,
+      {@required double amount,
       @required String productName,
       @required String productID,
       @required String callBackURL}) {
