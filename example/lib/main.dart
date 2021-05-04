@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     _esewaPnp = ESewaPnp(configuration: _configuration);
   }
 
-  int _amount = 0;
+  double _amount = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
                 keyboardType: TextInputType.number,
                 onChanged: (value) {
                   setState(() {
-                    _amount = int.parse(value);
+                    _amount = double.parse(value);
                   });
                 },
                 decoration: InputDecoration(
