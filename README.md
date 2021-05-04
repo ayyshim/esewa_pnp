@@ -10,7 +10,7 @@
 
   ```yaml
   dependencies:
-  	esewa_pnp: ^1.0.4
+  	esewa_pnp: ^1.0.5
   ```
 
 - [Android] Add following attribute inside your AndroidMainfest.xml
@@ -29,7 +29,7 @@
 
   ```yaml
   dependencies:
-  	# esewa_pnp: ^1.0.4 # Use it on production app or while testing esewa_pnp on real physical iOS device.
+  	# esewa_pnp: ^1.0.5 # Use it on production app or while testing esewa_pnp on real physical iOS device.
   	esewa_pnp:
   		git:
   			url: git://github.com/ayyshim/esewa_pnp.git
@@ -69,7 +69,7 @@ ESewaPnp _eSewaPnp = ESewaPnp(configuration: _configuration);
 ```dart
 ...
 ESewaPayment _payment = ESewaPayment(
-    amount: <ANY_INTEGER_VALUE>,
+    amount: <ANY_DOUBLE_VALUE>,
     productName: "<Product-Name>",
     productID: "<Unique-Product-ID>",
     callBackURL: "<Call-Back-URL>"
@@ -139,7 +139,7 @@ Example #1 (Default):
   ...
   ESewaPaymentButton(
     _esewaPnp,
-    amount: 800,
+    amount: 800.0,
     callBackURL: "https://example.com",
     productId: "abc123",
     productName: "ESewa Pnp Example",
@@ -161,7 +161,7 @@ Changing button color will also result to dyanmically change in label color and 
   ...
   ESewaPaymentButton(
     _esewaPnp,
-    amount: 800,
+    amount: 800.0,
     callBackURL: "https://example.com",
     productId: "abc123",
     productName: "ESewa Pnp Example",
@@ -182,7 +182,7 @@ Example #3 (with labelBuilder):
   ...
   ESewaPaymentButton(
     _esewaPnp,
-    amount: 800,
+    amount: 800.0,
     callBackURL: "https://example.com",
     productId: "abc123",
     productName: "ESewa Pnp Example",
@@ -220,3 +220,8 @@ Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/
 
 esewa_pnp is Starware.  
 This means you're free to use the project, as long as you star its GitHub repository.
+
+## Special thanks to contributors
+
+- [Bibek Timsina](https://github.com/bimsina)
+- [735l4](https://github.com/735l4)

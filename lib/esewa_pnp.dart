@@ -212,6 +212,7 @@ class ESewaPaymentButton extends StatelessWidget {
     return Container(
       height: this.height,
       width: this.width,
+      // ignore: deprecated_member_use
       child: RaisedButton(
         focusElevation: this.focusElevation,
         highlightElevation: this.highlightElevation,
