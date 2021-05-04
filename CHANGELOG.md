@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Added: double value in amount
+
 ## 1.0.4
 
 - Added: ESewaPaymentButton Widget
