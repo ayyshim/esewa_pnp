@@ -90,7 +90,7 @@ final _res = await _eSewaPnp.initPayment(payment: _payment);
 ```dart
 ...
 try {
-	final _res = await _eSewaPnp.initPayement(payment: _payment);
+	final _res = await _eSewaPnp.initPayment(payment: _payment);
 	// Handle success
 } on ESewaPaymentException catch(e) {
 	// Handle error
