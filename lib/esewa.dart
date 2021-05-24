@@ -3,7 +3,7 @@
  * Author : Ashim Upadhaya
  */
 
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 
 /// [ESewaConfiguration] class holds the config value of merchant id and environment.
 class ESewaConfiguration {
@@ -11,9 +11,9 @@ class ESewaConfiguration {
   static const ENVIRONMENT_LIVE = "live";
 
   // arguments
-  String _clientID;
-  String _secretKey;
-  String _env;
+  final String clientID;
+  final String secretKey;
+  final String environment;
 
   /// [ESewaConfiguration] constructor takes 3 requireds arguments
   ///
@@ -23,26 +23,18 @@ class ESewaConfiguration {
   ///
   /// **environment** : Environment integrating for i.e. LIVE (prod) or DEVELOPMENT (test).
   // Constructor
-  ESewaConfiguration(
-      {@required String clientID,
-      @required String secretKey,
-      @required String environment}) {
-    if (environment == ENVIRONMENT_LIVE || environment == ENVIRONMENT_TEST) {
-      this._clientID = clientID;
-      this._secretKey = secretKey;
-      this._env = environment;
-    } else {
-      throw Exception('''
-        Environment of EsewaConfiguration must set to value either ENVIRONMENT_TEST or ENVIRONMENT_LIVE
-      ''');
-    }
-  }
+  ESewaConfiguration({
+    required this.clientID,
+    required this.secretKey,
+    required this.environment,
+  }) : assert(
+            environment == ENVIRONMENT_LIVE || environment == ENVIRONMENT_TEST);
 
   Map<String, dynamic> toMap() {
     return {
-      "clientID": this._clientID,
-      "secretKey": this._secretKey,
-      "env": this._env
+      "clientID": clientID,
+      "secretKey": secretKey,
+      "env": environment,
     };
   }
 }
@@ -50,10 +42,10 @@ class ESewaConfiguration {
 /// [ESewaPayment] Create the payment information with payloads passed in it
 class ESewaPayment {
   // arguments
-  double _productPrice;
-  String _productName;
-  String _productID;
-  String _callBackURL;
+  double productPrice;
+  String productName;
+  String productID;
+  String callBackURL;
 
   /// [ESewaPayment] constructor takes 4 required arguments in order to complete payment process.
   ///
@@ -65,27 +57,19 @@ class ESewaPayment {
   ///
   /// **callBackURL** : API exposed at merchant/client`server where eSewa sends a copy of proof of payment after successful payment
   // constructor
-  ESewaPayment(
-      {@required double amount,
-      @required String productName,
-      @required String productID,
-      @required String callBackURL}) {
-    if (amount <= 0) {
-      throw new Exception("Paying amount can not be negative figure or zero.");
-    }
-
-    this._productPrice = amount;
-    this._productID = productID;
-    this._productName = productName;
-    this._callBackURL = callBackURL;
-  }
+  ESewaPayment({
+    required this.productPrice,
+    required this.productName,
+    required this.productID,
+    required this.callBackURL,
+  }) : assert(productPrice > 10);
 
   Map<String, dynamic> toMap() {
     return {
-      "amount": _productPrice,
-      "productName": _productName,
-      "productID": _productID,
-      "callBackURL": _callBackURL
+      "amount": productPrice,
+      "productName": productName,
+      "productID": productID,
+      "callBackURL": callBackURL
     };
   }
 }

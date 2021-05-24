@@ -20,7 +20,9 @@ import 'dart:io' show Platform;
 class ESewaPaymentException implements Exception {
   final String message;
 
-  ESewaPaymentException({@required this.message});
+  ESewaPaymentException({
+    required this.message,
+  });
 }
 
 /// **[ESewaResult]** holds the success response once the payment
@@ -35,13 +37,13 @@ class ESewaResult {
   final String referenceId;
 
   ESewaResult._({
-    @required this.productId,
-    @required this.productName,
-    @required this.totalAmount,
-    @required this.message,
-    @required this.date,
-    @required this.status,
-    @required this.referenceId,
+    required this.productId,
+    required this.productName,
+    required this.totalAmount,
+    required this.message,
+    required this.date,
+    required this.status,
+    required this.referenceId,
   });
 
   factory ESewaResult.fromMap(Map<String, dynamic> response) {
@@ -73,20 +75,22 @@ class ESewaResult {
 class ESewaPnp {
   static const MethodChannel _channel = const MethodChannel('esewa_pnp');
 
-  ESewaConfiguration _eSewaConfiguration;
+  final ESewaConfiguration configuration;
 
   /// [ESewaPnp] constructor takes [ESewaConfiguration] as argument.
-  ESewaPnp({@required ESewaConfiguration configuration}) {
-    _eSewaConfiguration = configuration;
-  }
+  ESewaPnp({
+    required this.configuration,
+  });
 
   /// This method will take user to the eSewa payment activity and returns [Future<ESewaResult>] once user is back to
   /// app.
   ///
   /// It takes [ESewaPayment] as argument.
-  Future<ESewaResult> initPayment({@required ESewaPayment payment}) async {
+  Future<ESewaResult> initPayment({
+    required ESewaPayment payment,
+  }) async {
     Map<String, dynamic> arguments = {
-      "config": _eSewaConfiguration.toMap(),
+      "config": configuration.toMap(),
       "payment": payment.toMap()
     };
 
@@ -133,29 +137,29 @@ class ESewaPaymentButton extends StatelessWidget {
 
   /// Customize button label if you don't want default label to be shown.
   /// You will get amount and esewaLogo widget.
-  final Widget Function(double amount, Widget esewaLogo) labelBuilder;
+  final Widget Function(double amount, Widget esewaLogo)? labelBuilder;
 
   final double elevation;
-  final double focusElevation;
-  final double highlightElevation;
-  final double hoverElevation;
-  final double height;
-  final double width;
-  final Color color;
+  final double? focusElevation;
+  final double? highlightElevation;
+  final double? hoverElevation;
+  final double? height;
+  final double? width;
+  final Color? color;
 
-  Widget _esewaLogo;
-  Color _textColor;
-  Widget _label;
+  late Widget _esewaLogo;
+  late Color _textColor;
+  late Widget _label;
 
   ESewaPaymentButton(
     this.esewa, {
-    Key key,
-    @required this.amount,
-    @required this.productId,
-    @required this.productName,
-    @required this.callBackURL,
-    @required this.onSuccess,
-    @required this.onFailure,
+    Key? key,
+    required this.amount,
+    required this.productId,
+    required this.productName,
+    required this.callBackURL,
+    required this.onSuccess,
+    required this.onFailure,
     this.labelBuilder,
     this.elevation = 4,
     this.height,
@@ -166,7 +170,7 @@ class ESewaPaymentButton extends StatelessWidget {
     this.hoverElevation,
   }) {
     this._esewaLogo = color != null
-        ? (color.computeLuminance() > 0.5
+        ? (color!.computeLuminance() > 0.5
             ? Image.asset(
                 "assets/esewa/logo_dark.png",
                 height: 24,
@@ -184,13 +188,13 @@ class ESewaPaymentButton extends StatelessWidget {
           );
 
     this._textColor = color != null
-        ? (color.computeLuminance() < 0.5
+        ? (color!.computeLuminance() < 0.5
             ? Color(0xFFFFFFFF)
             : Color(0xFF000000))
         : Color(0xFFFFFFFF);
 
     this._label = this.labelBuilder != null
-        ? this.labelBuilder(
+        ? this.labelBuilder!(
             this.amount,
             _esewaLogo,
           )
@@ -220,7 +224,7 @@ class ESewaPaymentButton extends StatelessWidget {
         elevation: this.elevation,
         onPressed: () async {
           ESewaPayment _payment = ESewaPayment(
-            amount: this.amount,
+            productPrice: this.amount,
             productName: this.productName,
             productID: this.productId,
             callBackURL: this.callBackURL,
