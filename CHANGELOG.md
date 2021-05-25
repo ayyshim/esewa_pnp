@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Migrated code base to null-safety.
+
 ## 1.0.5
 
 - Added: double value in amount
