@@ -11,9 +11,9 @@ class ESewaConfiguration {
   static const ENVIRONMENT_LIVE = "live";
 
   // arguments
-  String _clientID;
-  String _secretKey;
-  String _env;
+  String? _clientID;
+  String? _secretKey;
+  String? _env;
 
   /// [ESewaConfiguration] constructor takes 3 requireds arguments
   ///
@@ -24,9 +24,9 @@ class ESewaConfiguration {
   /// **environment** : Environment integrating for i.e. LIVE (prod) or DEVELOPMENT (test).
   // Constructor
   ESewaConfiguration(
-      {@required String clientID,
-      @required String secretKey,
-      @required String environment}) {
+      {required String clientID,
+      required String secretKey,
+      required String environment}) {
     if (environment == ENVIRONMENT_LIVE || environment == ENVIRONMENT_TEST) {
       this._clientID = clientID;
       this._secretKey = secretKey;
@@ -50,10 +50,10 @@ class ESewaConfiguration {
 /// [ESewaPayment] Create the payment information with payloads passed in it
 class ESewaPayment {
   // arguments
-  int _productPrice;
-  String _productName;
-  String _productID;
-  String _callBackURL;
+  int? _productPrice;
+  String? _productName;
+  String? _productID;
+  String? _callBackURL;
 
   /// [ESewaPayment] constructor takes 4 required arguments in order to complete payment process.
   ///
@@ -66,10 +66,10 @@ class ESewaPayment {
   /// **callBackURL** : API exposed at merchant/client`server where eSewa sends a copy of proof of payment after successful payment
   // constructor
   ESewaPayment(
-      {@required int amount,
-      @required String productName,
-      @required String productID,
-      @required String callBackURL}) {
+      {required int amount,
+      required String productName,
+      required String productID,
+      required String callBackURL}) {
     if (amount <= 0) {
       throw new Exception("Paying amount can not be negative figure or zero.");
     }

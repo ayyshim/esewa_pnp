@@ -1,3 +1,7 @@
+## 1.0.5-nullsafety
+
+- Migrated code base to nullsafety.
+
 ## 1.0.0+4
 
 - Added : ESewaPaymentButton Widget
