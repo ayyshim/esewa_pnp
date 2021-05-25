@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Version 1.0.5-nullsafety but simpler version code.
+
 ## 1.0.5-nullsafety
 
 - Migrated code base to nullsafety.
