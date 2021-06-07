@@ -1,3 +1,7 @@
+## 1.0.7
+
+Update framework to support latest swift version 5.4
+
 ## 1.0.6
 
 - Version 1.0.5-nullsafety but simpler version code.
