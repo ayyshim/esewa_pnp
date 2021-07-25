@@ -31,6 +31,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "aarjan",
+      "name": "Aarjan Baskota",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12951263?v=4",
+      "profile": "https://github.com/aarjan",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
