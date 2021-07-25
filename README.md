@@ -226,3 +226,4 @@ This means you're free to use the project, as long as you star its GitHub reposi
 - [Bibek Timsina](https://github.com/bimsina)
 - [735l4](https://github.com/735l4)
 - [Aarjan Baskota](https://github.com/aarjan)
+- [Aawaz Gyawali](https://github.com/awazgyawali)
