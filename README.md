@@ -1,6 +1,6 @@
 # esewa_pnp
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.7-green)](https://pub.dartlang.org/packages/esewa_pnp)
@@ -242,6 +242,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://httlp://aawaz.com.np"><img src="https://avatars.githubusercontent.com/u/10810343?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aawaz Gyawali</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=awazgyawali" title="Code">💻</a></td>
     <td align="center"><a href="https://bibek-timsina.com.np/"><img src="https://avatars.githubusercontent.com/u/29589003?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bibek Timsina</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=bimsina" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/aarjan"><img src="https://avatars.githubusercontent.com/u/12951263?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aarjan Baskota</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=aarjan" title="Code">💻</a></td>
   </tr>
 </table>
 
