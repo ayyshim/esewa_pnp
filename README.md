@@ -224,13 +224,6 @@ Checkout example implementation : [EsewaPnp Example](https://github.com/ayyshim/
 esewa_pnp is Starware.  
 This means you're free to use the project, as long as you star its GitHub repository.
 
-## Special thanks to contributors
-
-- [Bibek Timsina](https://github.com/bimsina)
-- [735l4](https://github.com/735l4)
-- [Aarjan Baskota](https://github.com/aarjan)
-- [Aawaz Gyawali](https://github.com/awazgyawali)
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
