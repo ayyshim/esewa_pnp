@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               TextField(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.numberWithOptions(decimal: true),
                 onChanged: (value) {
                   setState(() {
                     _amount = double.parse(value);
