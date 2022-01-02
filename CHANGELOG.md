@@ -1,3 +1,6 @@
+## 1.1.0
+
+Update framework to support latest XCode version 13
 ## 1.0.7
 
 Update framework to support latest swift version 5.4
