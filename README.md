@@ -1,9 +1,12 @@
 # esewa_pnp
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.1.0.7-green)](https://pub.dartlang.org/packages/esewa_pnp)
+[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.2.0.0-green)](https://pub.dartlang.org/packages/esewa_pnp)
 
 **esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
@@ -13,7 +16,7 @@
 
   ```yaml
   dependencies:
-  	esewa_pnp: ^1.0.7
+  	esewa_pnp: ^2.0.0
   ```
 
 - [Android] Add following attribute inside your AndroidMainfest.xml
@@ -32,7 +35,7 @@
 
   ```yaml
   dependencies:
-  	# esewa_pnp: ^1.0.7 # Use it on production app or while testing esewa_pnp on real physical iOS device.
+  	# esewa_pnp: ^2.0.0 # Use it on production app or while testing esewa_pnp on real physical iOS device.
   	esewa_pnp:
   		git:
   			url: git://github.com/ayyshim/esewa_pnp.git
@@ -121,7 +124,7 @@ try {
 - `.status` [String] : returns the transaction status
 - `.referenceId` [String] : returns the transaction reference id
 
-## 🆕 ESewaPaymentButton
+## ESewaPaymentButton
 
 **ESewaPaymentButton** is a customizable button widget. It takes `ESewaPnp`, 6 required named parameters and 8 optional parameters.
 
@@ -237,6 +240,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://bibek-timsina.com.np/"><img src="https://avatars.githubusercontent.com/u/29589003?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bibek Timsina</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=bimsina" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/735l4"><img src="https://avatars.githubusercontent.com/u/42088682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pratibimba Khadka</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=735l4" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/aarjan"><img src="https://avatars.githubusercontent.com/u/12951263?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aarjan Baskota</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=aarjan" title="Code">💻</a></td>
+    <td align="center"><a href="https://bitpointx.com.au"><img src="https://avatars.githubusercontent.com/u/30515730?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bikram Aryal</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=aryalg" title="Code">💻</a></td>
   </tr>
 </table>
 
