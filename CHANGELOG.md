@@ -1,14 +1,18 @@
+# 2.0.1
+
+- Added support for iOS swift 5.6.
+
 # 2.0.0
 
 - Update android gradle issue with gradle version above 3.x.x.
 
 ## 1.1.0
 
-Update framework to support latest XCode version 13
+- Update framework to support latest XCode version 13
 
 ## 1.0.7
 
-Update framework to support latest swift version 5.4
+- Update framework to support latest swift version 5.4
 
 ## 1.0.6
 
