@@ -11,21 +11,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ESewaPnp _esewaPnp;
-  ESewaConfiguration _configuration;
+  ESewaPnp? _esewaPnp;
+  ESewaConfiguration? _configuration = ESewaConfiguration(
+    clientID: "JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R",
+    secretKey: "BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==",
+    environment: ESewaConfiguration.ENVIRONMENT_TEST,
+  );
 
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-
-    _configuration = ESewaConfiguration(
-      clientID: "JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R",
-      secretKey: "BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==",
-      environment: ESewaConfiguration.ENVIRONMENT_TEST,
-    );
-    _esewaPnp = ESewaPnp(configuration: _configuration);
+    _esewaPnp = ESewaPnp(configuration: _configuration!);
   }
 
   double _amount = 0;
@@ -62,18 +60,18 @@ class _MyAppState extends State<MyApp> {
                 height: 16,
               ),
               ESewaPaymentButton(
-                this._esewaPnp,
+                _esewaPnp!,
                 amount: _amount,
                 callBackURL: "https://example.com",
                 productId: "abc123",
                 productName: "Flutter SDK Example",
                 onSuccess: (result) {
                   ScaffoldMessenger.of(context).showSnackBar(_buildSnackBar(
-                      Color.fromRGBO(65, 161, 36, 1), result.message));
+                      Color.fromRGBO(65, 161, 36, 1), result.message ?? ""));
                 },
                 onFailure: (e) {
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(_buildSnackBar(Colors.red, e.message));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      _buildSnackBar(Colors.red, e.message ?? ""));
                 },
               ),
               SizedBox(
@@ -90,7 +88,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  Widget _buildSnackBar(Color color, String msg) {
+  SnackBar _buildSnackBar(Color color, String msg) {
     return SnackBar(
       backgroundColor: color,
       content: Text(msg),
