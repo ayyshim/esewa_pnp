@@ -143,7 +143,6 @@ class ESewaPaymentButton extends StatelessWidget {
   final Color? color;
 
   Widget? _esewaLogo;
-  Color? _textColor;
   Widget? _label;
 
   ESewaPaymentButton(
@@ -182,12 +181,6 @@ class ESewaPaymentButton extends StatelessWidget {
             width: 54,
           );
 
-    this._textColor = color != null
-        ? (color!.computeLuminance() < 0.5
-            ? Color(0xFFFFFFFF)
-            : Color(0xFF000000))
-        : Color(0xFFFFFFFF);
-
     this._label = this.labelBuilder != null
         ? this.labelBuilder!(
             this.amount,
@@ -212,11 +205,7 @@ class ESewaPaymentButton extends StatelessWidget {
       height: this.height,
       width: this.width,
       // ignore: deprecated_member_use
-      child: RaisedButton(
-        focusElevation: this.focusElevation,
-        highlightElevation: this.highlightElevation,
-        hoverElevation: this.hoverElevation,
-        elevation: this.elevation,
+      child: ElevatedButton(
         onPressed: () async {
           ESewaPayment _payment = ESewaPayment(
             amount: this.amount,
@@ -233,8 +222,6 @@ class ESewaPaymentButton extends StatelessWidget {
           }
         },
         child: this._label,
-        textColor: _textColor,
-        color: color ?? Color(0xFF000000),
       ),
     );
   }
