@@ -236,7 +236,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://httlp://aawaz.com.np"><img src="https://avatars.githubusercontent.com/u/10810343?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aawaz Gyawali</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=awazgyawali" title="Code">💻</a></td>
+    <td align="center"><a href="https://aawaz.com.np"><img src="https://avatars.githubusercontent.com/u/10810343?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aawaz Gyawali</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=awazgyawali" title="Code">💻</a></td>
     <td align="center"><a href="https://bibek-timsina.com.np/"><img src="https://avatars.githubusercontent.com/u/29589003?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bibek Timsina</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=bimsina" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/735l4"><img src="https://avatars.githubusercontent.com/u/42088682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pratibimba Khadka</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=735l4" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/aarjan"><img src="https://avatars.githubusercontent.com/u/12951263?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aarjan Baskota</b></sub></a><br /><a href="https://github.com/ayyshim/esewa_pnp/commits?author=aarjan" title="Code">💻</a></td>
