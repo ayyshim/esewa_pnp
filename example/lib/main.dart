@@ -23,7 +23,9 @@ class _MyAppState extends State<MyApp> {
     _configuration = ESewaConfiguration(
       clientID: "JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R",
       secretKey: "BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==",
-      environment: ESewaConfiguration.ENVIRONMENT_TEST,
+      environment: ENVIRONMENT_TYPE.TEST,
+
+      /// [ENVIRONMENT_TYPE.LIVE] for live
     );
     _esewaPnp = ESewaPnp(configuration: _configuration);
   }

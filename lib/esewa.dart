@@ -3,11 +3,12 @@
  * Author : Ashim Upadhaya
  */
 
+/// [ENVIRONMENT_TYPE] enums holds the type of environment ESEWA will be used.
+// ignore: camel_case_types
+enum ENVIRONMENT_TYPE { LIVE, TEST }
+
 /// [ESewaConfiguration] class holds the config value of merchant id and environment.
 class ESewaConfiguration {
-  static const ENVIRONMENT_TEST = "test";
-  static const ENVIRONMENT_LIVE = "live";
-
   // arguments
   String? _clientID;
   String? _secretKey;
@@ -24,11 +25,12 @@ class ESewaConfiguration {
   ESewaConfiguration(
       {required String clientID,
       required String secretKey,
-      required String environment}) {
-    if (environment == ENVIRONMENT_LIVE || environment == ENVIRONMENT_TEST) {
+      required ENVIRONMENT_TYPE environment}) {
+    if (environment == ENVIRONMENT_TYPE.LIVE ||
+        environment == ENVIRONMENT_TYPE.TEST) {
       this._clientID = clientID;
       this._secretKey = secretKey;
-      this._env = environment;
+      this._env = environment == ENVIRONMENT_TYPE.LIVE ? 'live' : 'test';
     } else {
       throw Exception('''
         Environment of EsewaConfiguration must set to value either ENVIRONMENT_TEST or ENVIRONMENT_LIVE
