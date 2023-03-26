@@ -69,11 +69,11 @@ class _MyAppState extends State<MyApp> {
                 productName: "Flutter SDK Example",
                 onSuccess: (result) {
                   ScaffoldMessenger.of(context).showSnackBar(_buildSnackBar(
-                      Color.fromRGBO(65, 161, 36, 1), result.message));
+                      Color.fromRGBO(65, 161, 36, 1), result.message.toString()));
                 },
                 onFailure: (e) {
                   ScaffoldMessenger.of(context)
-                      .showSnackBar(_buildSnackBar(Colors.red, e.message));
+                      .showSnackBar(_buildSnackBar(Colors.red, e.message.toString()));
                 },
               ),
               SizedBox(

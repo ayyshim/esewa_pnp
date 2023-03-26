@@ -98,8 +98,7 @@ class ESewaPnp {
       if (Platform.isAndroid) {
         return ESewaResult.fromMap(json.decode(responseMap["message"]));
       } else {
-        Map<String, dynamic> resp =
-            Map<String, dynamic>.from(responseMap["message"]);
+        Map<String, dynamic> resp = Map<String, dynamic>.from(responseMap["message"]);
         return ESewaResult.fromMap(resp);
       }
     }
@@ -147,63 +146,61 @@ class ESewaPaymentButton extends StatelessWidget {
   Widget? _label;
 
   ESewaPaymentButton(
-    this.esewa, {
-    Key? key,
-    required this.amount,
-    required this.productId,
-    required this.productName,
-    required this.callBackURL,
-    required this.onSuccess,
-    required this.onFailure,
-    this.labelBuilder,
-    this.elevation = 4,
-    this.height,
-    this.width,
-    this.color,
-    this.focusElevation,
-    this.highlightElevation,
-    this.hoverElevation,
-  }) {
+      this.esewa, {
+        Key? key,
+        required this.amount,
+        required this.productId,
+        required this.productName,
+        required this.callBackURL,
+        required this.onSuccess,
+        required this.onFailure,
+        this.labelBuilder,
+        this.elevation = 4,
+        this.height,
+        this.width,
+        this.color,
+        this.focusElevation,
+        this.highlightElevation,
+        this.hoverElevation,
+      }) {
     this._esewaLogo = color != null
         ? (color!.computeLuminance() > 0.5
-            ? Image.asset(
-                "assets/esewa/logo_dark.png",
-                height: 24,
-                width: 54,
-              )
-            : Image.asset(
-                "assets/esewa/logo.png",
-                height: 24,
-                width: 54,
-              ))
+        ? Image.asset(
+      "assets/esewa/logo_dark.png",
+      height: 24,
+      width: 54,
+    )
         : Image.asset(
-            "assets/esewa/logo.png",
-            height: 24,
-            width: 54,
-          );
+      "assets/esewa/logo.png",
+      height: 24,
+      width: 54,
+    ))
+        : Image.asset(
+      "assets/esewa/logo.png",
+      height: 24,
+      width: 54,
+    );
 
     this._textColor = color != null
-        ? (color!.computeLuminance() < 0.5
-            ? Color(0xFFFFFFFF)
-            : Color(0xFF000000))
+        ? (color!.computeLuminance() < 0.5 ? Color(0xFFFFFFFF) : Color(0xFF000000))
         : Color(0xFFFFFFFF);
 
     this._label = this.labelBuilder != null
         ? this.labelBuilder!(
-            this.amount,
-            _esewaLogo,
-          )
+      this.amount,
+      _esewaLogo,
+    )
         : Row(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Pay now with ",
-              ),
-              _esewaLogo!,
-            ],
-          );
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Pay now with ",
+        ),
+        _esewaLogo!,
+      ],
+    );
   }
 
   @override
@@ -212,11 +209,8 @@ class ESewaPaymentButton extends StatelessWidget {
       height: this.height,
       width: this.width,
       // ignore: deprecated_member_use
-      child: RaisedButton(
-        focusElevation: this.focusElevation,
-        highlightElevation: this.highlightElevation,
-        hoverElevation: this.hoverElevation,
-        elevation: this.elevation,
+
+      child: ElevatedButton(
         onPressed: () async {
           ESewaPayment _payment = ESewaPayment(
             amount: this.amount,
@@ -233,8 +227,15 @@ class ESewaPaymentButton extends StatelessWidget {
           }
         },
         child: this._label,
-        textColor: _textColor,
-        color: color ?? Color(0xFF000000),
+        style: ButtonStyle(
+          padding:
+          MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.symmetric(vertical: 10)),
+          textStyle: MaterialStateProperty.all<TextStyle>(TextStyle(color: _textColor)),
+          backgroundColor: MaterialStateProperty.all<Color>(color ?? Color(0xFF000000)),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+        ),
       ),
     );
   }
