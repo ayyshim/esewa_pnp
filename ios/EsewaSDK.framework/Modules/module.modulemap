@@ -6,6 +6,6 @@ framework module EsewaSDK {
 }
 
 module EsewaSDK.Swift {
-    header "EsewaSDK-Swift.h"
-    requires objc
+  header "EsewaSDK-Swift.h"
+  requires objc
 }
