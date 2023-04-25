@@ -39,9 +39,10 @@ public class SwiftEsewaPnpPlugin: NSObject, FlutterPlugin, EsewaSDKPaymentDelega
         let productName = payment.value(forKey: "productName") as! String
         let productID = payment.value(forKey: "productID") as! String
         let callBackURL = payment.value(forKey: "callBackURL") as! String
-        
+        let ebpNo = payment.value(forKey: "ebp_no") as? String
+
         sdk = EsewaSDK(inViewController: controller, environment: env, delegate: self)
-        sdk?.initiatePayment(merchantId: clientID, merchantSecret: secretKey, productName: productName, productAmount: amount, productId: productID, callbackUrl: callBackURL)
+        sdk?.initiatePayment(merchantId: clientID, merchantSecret: secretKey, productName: productName, productAmount: amount, productId: productID, callbackUrl: callBackURL,paymentProperties: ebpNo==nil ? nil : ["ebpNo":ebpNo!])
     }
     
     public func onEsewaSDKPaymentSuccess(info: [String : Any]) {
@@ -62,3 +63,5 @@ public class SwiftEsewaPnpPlugin: NSObject, FlutterPlugin, EsewaSDKPaymentDelega
        
        
 }
+
+
