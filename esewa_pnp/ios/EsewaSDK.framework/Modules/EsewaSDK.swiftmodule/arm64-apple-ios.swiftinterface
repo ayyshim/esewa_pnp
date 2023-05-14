@@ -1,0 +1,322 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name EsewaSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import EsewaSDK
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+public enum ValidationType {
+  case email
+  case password
+  case text
+  case fullName
+  case mobileNumber
+  case landline
+  case esewaId
+  case mpin
+  public var autocapitalizationStyle: UIKit.UITextAutocapitalizationType {
+    get
+  }
+  public var keyboardType: UIKit.UIKeyboardType {
+    get
+  }
+  public static func == (a: EsewaSDK.ValidationType, b: EsewaSDK.ValidationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class TextFieldValidator : ObjectiveC.NSObject {
+  public typealias Validation = (field: EsewaSDK.FormTextField, validationType: EsewaSDK.ValidationType)
+  public var validationList: [EsewaSDK.TextFieldValidator.Validation]
+  public var isValidationSuccess: Swift.Bool
+  public func add(field: EsewaSDK.FormTextField, validationType: EsewaSDK.ValidationType, characterLimit: Swift.Int)
+  public func validateAll()
+  public func resetAllValidation()
+  public func validateTextField(field: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateMpin(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateRegex(textField: EsewaSDK.FormTextField, regex: Swift.String, errorMessage: Swift.String) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateEsewaId(textfield: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateFullName(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateText(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateMobileNumber(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateEmail(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validatePassword(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateLandline(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  public func validateIfInputIsMandatory(textField: EsewaSDK.FormTextField) -> (isValid: Swift.Bool, message: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension EsewaSDK.TextFieldValidator : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc dynamic open func textFieldDidEdit(_ textField: EsewaSDK.FormTextField)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FormTokenValidator : EsewaSDK.TextFieldValidator {
+  @_Concurrency.MainActor(unsafe) public var errorLabel: UIKit.UILabel?
+  @objc override dynamic open func textFieldDidEdit(_ textField: EsewaSDK.FormTextField)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public class var identifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var frameWidth: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var frameHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var boundsWidth: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var boundsHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func addCornerRadius(radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func roundCorners(corners: UIKit.UIRectCorner, radius: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func setupForAutolayout(in view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func pinTrailingToTrailing(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinTrailingToLeading(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinTopToTopSafeArea(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinTopToTop(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinTopToBottom(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinLeadingToLeading(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinLeadingToTrailing(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinBottomToBottom(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinBottomToBottomSafeArea(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinBottomToTop(of view: UIKit.UIView, constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinEqualHeight(to view: UIKit.UIView, constant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func pinEqualWidth(to view: UIKit.UIView, constant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func pinHeight(constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinHeightProportional(to view: UIKit.UIView, multiplier: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinWidthProportional(to view: UIKit.UIView, multiplier: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinWidth(constant: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func pinToCenterHorizontally(in view: UIKit.UIView, constant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func pinToCenterVertically(in view: UIKit.UIView, constant: CoreFoundation.CGFloat = 0)
+  @_Concurrency.MainActor(unsafe) public func pin(left: CoreFoundation.CGFloat, right: CoreFoundation.CGFloat, top: CoreFoundation.CGFloat, bottom: CoreFoundation.CGFloat, toView view: UIKit.UIView)
+  @_Concurrency.MainActor(unsafe) public func addDropShadow()
+  @_Concurrency.MainActor(unsafe) public func rotate180Degree()
+  @_Concurrency.MainActor(unsafe) public func setRandomColorBackground()
+  @_Concurrency.MainActor(unsafe) public func displayEmbeddedMessage(label: UIKit.UILabel, message: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func hideEmbeddedMessage(label: UIKit.UILabel?)
+  @_Concurrency.MainActor(unsafe) public func showActivityIndicator(indicator: UIKit.UIActivityIndicatorView?)
+  @_Concurrency.MainActor(unsafe) public func hideActivityIndicator(indicator: UIKit.UIActivityIndicatorView?)
+  @_Concurrency.MainActor(unsafe) public func addGradient(colors: [UIKit.UIColor] = [.black, .clear], locations: [Foundation.NSNumber] = [0, 1.0], startPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 0.0), endPoint: CoreFoundation.CGPoint = CGPoint(x: 0.5, y: 1.0), type: QuartzCore.CAGradientLayerType = .axial)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RootViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func setupScrollViewWhenKeyboardAppears(scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FormTextField : UIKit.UITextField {
+  @_Concurrency.MainActor(unsafe) public var validationType: EsewaSDK.ValidationType
+  @_Concurrency.MainActor(unsafe) public var characterLimit: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var isRequired: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isErrorPresent: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isValid: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var messageEmptyField: Swift.String
+  @_Concurrency.MainActor(unsafe) open func showError(message: Swift.String)
+  @_Concurrency.MainActor(unsafe) open func hideError()
+  @_Concurrency.MainActor(unsafe) open func showValidIndicator()
+  @_Concurrency.MainActor(unsafe) open func hideValidIndicator()
+  @_Concurrency.MainActor(unsafe) open func reset()
+  @_Concurrency.MainActor(unsafe) open func setText(text: Swift.String?, isEditable: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class BoxTextField : EsewaSDK.FormTextField {
+  @_Concurrency.MainActor(unsafe) final public let bottomInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var leftPadding: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var rightPadding: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var topPadding: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var bottomPadding: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) final public let boxLayer: QuartzCore.CAShapeLayer
+  @_Concurrency.MainActor(unsafe) final public let errorLabel: UIKit.UILabel
+  @_Concurrency.MainActor(unsafe) final public let textFieldBackgroundColorForLight: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) final public let textFieldBackgroundColorForDark: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) final public let esewaMainColorLight: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) final public let esewaMainColorDark: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public var rightImageView: UIKit.UIImageView?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func placeholderRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func setupViews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func traitCollectionDidChange(_ previousTraitCollection: UIKit.UITraitCollection?)
+  @_Concurrency.MainActor(unsafe) override public func showError(message: Swift.String)
+  @_Concurrency.MainActor(unsafe) override public func hideError()
+  @_Concurrency.MainActor(unsafe) override public func reset()
+  @_Concurrency.MainActor(unsafe) override public func showValidIndicator()
+  @_Concurrency.MainActor(unsafe) override public func hideValidIndicator()
+  @_Concurrency.MainActor(unsafe) public func addImageToRight(withImage: UIKit.UIImage?)
+  @_Concurrency.MainActor(unsafe) public func addImageToLeft(withImage: UIKit.UIImage?)
+  @objc deinit
+}
+public enum EsewaSDKEnvironment : Swift.String {
+  case development
+  case production
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EsewaSDKError : Swift.Error {
+  case noInternetConnection
+  case unknownError
+  case invalidMerchant
+  case apiError(message: Swift.String)
+  case invalidResponse
+  case cancelPayment
+  case authError(message: Swift.String)
+  case tokenNotEntered
+  case invalidToken
+}
+extension UIKit.UIDevice {
+  public enum DeviceType : Swift.String {
+    case iPhone4
+    case iPhone5
+    case iPhone6
+    case iPhone6Plus
+    case iPhoneX
+    case iPhone11
+    case iPhoneXR
+    case unknown
+    case iphone12Mini
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @_Concurrency.MainActor(unsafe) public var deviceType: UIKit.UIDevice.DeviceType {
+    get
+  }
+}
+@objc public protocol EsewaSDKPaymentDelegate {
+  @objc func onEsewaSDKPaymentSuccess(info: [Swift.String : Any])
+  @objc func onEsewaSDKPaymentError(errorDescription: Swift.String)
+}
+@objc public class EsewaSDK : ObjectiveC.NSObject {
+  public static var environment: EsewaSDK.EsewaSDKEnvironment
+  public init(inViewController viewController: UIKit.UIViewController, environment: EsewaSDK.EsewaSDKEnvironment, delegate: EsewaSDK.EsewaSDKPaymentDelegate)
+  public func initiatePayment(merchantId: Swift.String, merchantSecret: Swift.String, productName: Swift.String, productAmount: Swift.String, productId: Swift.String, callbackUrl: Swift.String, paymentProperties: [Swift.String : Any]?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class RequestViewController : EsewaSDK.RootViewController {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var indicator: UIKit.UIActivityIndicatorView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class FormElementView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var margin: UIKit.UIEdgeInsets
+  @_Concurrency.MainActor(unsafe) public var height: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var heightConstraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor(unsafe) public var topConstraint: UIKit.NSLayoutConstraint?
+  @_Concurrency.MainActor(unsafe) open func toggleTextVisibility(shouldHide: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class HeaderCurveView : EsewaSDK.FormElementView {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var desiredCurve: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) public func addBottomRoundedEdge(desiredCurve: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SdkPaymentViewController : EsewaSDK.RootViewController {
+  @_Concurrency.MainActor(unsafe) public var transactionDetails: [Swift.String : Any]
+  @_Concurrency.MainActor(unsafe) public var statementDetails: [Swift.String : Any]
+  @_Concurrency.MainActor(unsafe) public var isLoginFromMpin: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public func makePayment(tokenTf: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum ReachabilityError : Swift.Error {
+  case FailedToCreateWithAddress(Darwin.sockaddr_in)
+  case FailedToCreateWithHostname(Swift.String)
+  case UnableToSetCallback
+  case UnableToSetDispatchQueue
+}
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+public class Reachability {
+  public typealias NetworkReachable = (EsewaSDK.Reachability) -> ()
+  public typealias NetworkUnreachable = (EsewaSDK.Reachability) -> ()
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: EsewaSDK.Reachability.NetworkStatus, b: EsewaSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: EsewaSDK.Reachability.NetworkReachable?
+  public var whenUnreachable: EsewaSDK.Reachability.NetworkUnreachable?
+  public var reachableOnWWAN: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  public var currentReachabilityStatus: EsewaSDK.Reachability.NetworkStatus {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability)
+  convenience public init?(hostname: Swift.String)
+  convenience public init?()
+  @objc deinit
+}
+extension EsewaSDK.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  public var isReachable: Swift.Bool {
+    get
+  }
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public var modelName: Swift.String {
+    get
+  }
+}
+extension EsewaSDK.ValidationType : Swift.Equatable {}
+extension EsewaSDK.ValidationType : Swift.Hashable {}
+extension EsewaSDK.EsewaSDKEnvironment : Swift.Equatable {}
+extension EsewaSDK.EsewaSDKEnvironment : Swift.Hashable {}
+extension EsewaSDK.EsewaSDKEnvironment : Swift.RawRepresentable {}
+extension UIKit.UIDevice.DeviceType : Swift.Equatable {}
+extension UIKit.UIDevice.DeviceType : Swift.Hashable {}
+extension UIKit.UIDevice.DeviceType : Swift.RawRepresentable {}
+extension EsewaSDK.Reachability.NetworkStatus : Swift.Equatable {}
+extension EsewaSDK.Reachability.NetworkStatus : Swift.Hashable {}

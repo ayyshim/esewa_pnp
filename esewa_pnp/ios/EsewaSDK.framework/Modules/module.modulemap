@@ -1,0 +1,11 @@
+framework module EsewaSDK {
+  umbrella header "EsewaSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module EsewaSDK.Swift {
+  header "EsewaSDK-Swift.h"
+  requires objc
+}
