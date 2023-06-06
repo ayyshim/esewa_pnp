@@ -6,7 +6,15 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware) [![pub package](https://img.shields.io/badge/pub-v.2.0.1-green)](https://pub.dartlang.org/packages/esewa_pnp)
+> I regret to inform you that I have made the difficult decision to discontinue support for the eSewa_PnP plugin. As an individual developer, I am facing time constraints that prevent me from dedicating the necessary attention and maintenance that the plugin deserves. I understand the importance of providing reliable support, and I have found it increasingly challenging to balance my commitments.
+>
+> I apologize for any inconvenience this may cause to your workflow. It is important to me that you have an alternative solution, which is why I want to recommend the Flutter plugin provided by eSewa. You can find more information about it at the following link: [eSewa Flutter Plugin](https://developer.esewa.com.np/#/flutter).
+>
+> The eSewa Flutter plugin offers similar functionality to the eSewa_PnP plugin and is actively maintained by a dedicated team at eSewa. It has received positive feedback from the community and is well-suited to address your needs effectively. I encourage you to explore this alternative and evaluate its compatibility with your projects.
+>
+> I would like to express my heartfelt gratitude to all of our contributors who have selflessly dedicated their valuable time and effort to maintain and support this plugin. Your contributions have been truly invaluable, and I am immensely grateful for your commitment and hard work. Your expertise and dedication have played a pivotal role in making this plugin a valuable resource for our community. I want to personally thank each and every one of you for your outstanding contributions and for being an integral part of this incredible journey. Your efforts have made a significant impact, and I am deeply appreciative of your support.
+
+![Status](https://img.shields.io/badge/Status-Discontinued-red.svg)
 
 **esewa_pnp** is flutter plugin that let's developer to integrate native [eSewa](https://www.esewa.com.np) payment method into their flutter application with just few lines of code.
 
